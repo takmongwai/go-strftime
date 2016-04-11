@@ -45,7 +45,7 @@ func Strftime(t *time.Time, format string) (r string) {
 
   b := []rune(format)
   for i := 0; i < len(b); i++ {
-    if b[i] == '%' && b[i+1] != '%' {
+    if b[i] == '%' && len(b) > i+1 && b[i+1] != '%' {
       switch b[i+1] {
       //year
       case 'Y', 'G':

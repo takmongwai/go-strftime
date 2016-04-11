@@ -108,6 +108,9 @@ func TestFormat(t *testing.T){
    "%Y-%_m-%d":"2013- 2-06",
    "%Y-%-m-%d":"2013-2-06",
    "%Y-%-m-%-d":"2013-2-6",
+   
+   "%Y-%m-%d%":"2013-02-06%",
+   "%": "%",
   }
   for f,a := range cs{
     test_format(t,f,a)
